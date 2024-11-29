@@ -1,8 +1,8 @@
-const db = require('../db.js'); // Not sure if this is what to do ???
+// const db = require('../db.js'); // Not sure if this is what to do ???
 
-const displayHomePage = async (req, res) => {
-    const getDb = await db();
-    res.render('index', { title: 'Home Page', db }); // Def res.render something ???
+const indexTitle = (req, res) => { // async if using db...
+    // const getDb = await db();
+    res.render('index', { title: 'Menu List', }); // db as second object....
 };
 
-module.exports = displayHomePage;
+module.exports = indexTitle;
