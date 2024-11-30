@@ -1,12 +1,13 @@
 // Environment variables
-require('dotenv').config();
-const path = require('node:path');
 const express = require('express');
+const path = require('node:path');
+require('dotenv').config();
+const app = express();
+
 const indexRouter = require('./routes/indexRouter');
 const categoriesRouter = require('./routes/categoriesRouter');
 const productsRouter = require('./routes/productsRouter');
 
-const app = express();
 // const assetsPath = path.join(__dirname, 'views'); // put into views set below...extra line of code???
 
 // What does this do???
@@ -18,7 +19,6 @@ const app = express();
 app.set('views', path.join(__dirname, 'views')); // app.set('views', assetsPath); 
 app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT;
 
 // Routes
 app.use('/', indexRouter); // main page
@@ -30,6 +30,8 @@ app.use((err, req, res, next) => {
     console.log(err);
     res.status(err.statusCode || 500).send(err.message);
 });
+
+const PORT = process.env.PORT;
 
 app.listen(PORT, () => {
     console.log(`Inventory app is listening on port ${PORT}!`);

@@ -1,9 +1,10 @@
-const { Router } = require('express');
-const { getCategoryById } = require('../controllers/categoryController');
+const express = require('express');
 
-const categoryRouter = Router();
+const categoriesRouter = express.Router();
 
-categoryRouter.get('/', (req, res) => res.send('All categories'));
-categoryRouter.get('/:categoryId', getCategoryById);
+const categoriesController = require('../controllers/categoriesController');
 
-module.exports = categoryRouter;
+categoriesRouter.get('/', (req, res) => res.send('All categories'));
+categoriesRouter.get('/:categoryId', categoriesController.getCategoryById);
+
+module.exports = categoriesRouter;
