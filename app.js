@@ -25,6 +25,12 @@ app.use('/', indexRouter); // main page
 app.use('/categories', categoriesRouter); // different alcohol: wine, beer, whiskey, etc...
 app.use('/products', productsRouter); // within each category: red wine, white wine, ipas, stout, bourbon, scotch, etc...
 
+// Error handling
+app.use((err, req, res, next) => {
+    console.log(err);
+    res.status(err.statusCode || 500).send(err.message);
+});
+
 app.listen(PORT, () => {
     console.log(`Inventory app is listening on port ${PORT}!`);
 });
