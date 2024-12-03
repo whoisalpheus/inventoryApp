@@ -1,9 +1,19 @@
 // const asyncHandler = require('express-async-handler');
 // const CustomNotFoundError = require('../errors/CustomNotFoundError.js');
-const db = require('../db.js');
+// const db = require('../db.js');
 
-const categories = (req, res) => {
-    res.render('categories', { category: category.id });
+const categories = [
+    { name: 'Beer' },
+    { name: 'Wine' },
+    { name: 'Whiskey' },
+    { name: 'Rum' },
+    { name: 'Tequila' },
+];
+
+
+const categoriesController = (req, res) => {
+    res.locals.categories = categories;
+    res.render('categories', { categories: res.locals.categories });
 }
 
 // const getCategoryById = asyncHandler(async (req, res) => {
@@ -20,4 +30,4 @@ const categories = (req, res) => {
 //     res.send(`Category Name: ${category.name}`);
 // });
 
-module.exports = { categories };
+module.exports = categoriesController;

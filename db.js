@@ -3,11 +3,11 @@
 // Categories
 const categories = ['Beer', 'Wine', 'Whiskey', 'Rum', 'Tequila']; 
 
-async function getCategoryById(categoryId) {
-    return categories.find(category => categoryId === categoryId);
-};
+// async function getCategoryById(categoryId) {
+//     return categories.find(category => categoryId === categoryId);
+// };
 
-module.exports = { getCategoryById };
+module.exports = categories;
 
 // Products
 // const products = [
