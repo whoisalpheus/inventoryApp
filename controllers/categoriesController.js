@@ -1,9 +1,9 @@
 // const asyncHandler = require('express-async-handler');
 // const CustomNotFoundError = require('../errors/CustomNotFoundError.js');
-// const db = require('../db.js');
+const db = require('../db.js');
 
 const categories = (req, res) => {
-    res.render('categories', { })
+    res.render('categories', { category: category.id });
 }
 
 // const getCategoryById = asyncHandler(async (req, res) => {
@@ -20,4 +20,4 @@ const categories = (req, res) => {
 //     res.send(`Category Name: ${category.name}`);
 // });
 
-module.exports = {  };
+module.exports = { categories };
