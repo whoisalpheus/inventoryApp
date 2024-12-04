@@ -10,11 +10,16 @@
     <!-- TODO: Must go through the categories array and somehow display each one in a <li></li>
     USE forEach(categories) ??? -->
 
-    <!-- <ul>
-        <% categories.forEach((categories) => { %>
-            <% categories.id %> ???
+    <ul>
+        <!-- <% if (locals.categories) { %>
+            <li>
+                <%= categories.id %>
+            </li>
+        <% }; %> -->
+        <% categories.forEach((category) => { %>
+            <li><a href="/categories"><% category %></a></li>
         <% }); %>
-    </ul> -->
+    </ul>
 
     <!-- OR -->
 
@@ -28,14 +33,14 @@
     </ul> -->
 
     <!-- Beer productId: beer -->
-    <a href="/products:beer"><h1><%= categories.name %></h1></a>
-    <!-- Wine productId: wine -->
-    <a href="/products/wine"><h1><%= categories.name %></h1></a>
+    <!-- <a href="/products:beer"><h1><%= categories.name %></h1></a> -->
+    <!-- Winde productId: wine -->
+    <!-- <a href="/products/wine"><h1><%= categories.name %></h1></a> -->
     <!-- Whiskey productId: whiskey -->
-    <a href="/products/whiskey"><h1><%= categories.name %></h1></a>
+    <!-- <a href="/products/whiskey"><h1><%= categories.name %></h1></a> -->
     <!-- Rum productId: rum -->
-    <a href="/products/rum"><h1><%= categories.name %></h1></a>
+    <!-- <a href="/products/rum"><h1><%= categories.name %></h1></a> -->
     <!-- Tequila productId: tequila -->
-    <a href="/products/tequila"><h1><%= categories.name %></h1></a>
+    <!-- <a href="/products/tequila"><h1><%= categories.name %></h1></a> -->
 </body>
 </html>

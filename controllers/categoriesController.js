@@ -3,17 +3,17 @@
 // const db = require('../db.js');
 
 const categories = [
-    { name: 'Beer' },
-    { name: 'Wine' },
-    { name: 'Whiskey' },
-    { name: 'Rum' },
-    { name: 'Tequila' },
+    'Beer',
+    'Wine',
+    'Whiskey',
+    'Rum',
+    'Tequila'
 ];
 
 
 const categoriesController = (req, res) => {
     res.locals.categories = categories;
-    res.render('categories', { categories: res.locals.categories });
+    res.render('categories', { categories: categories });
 }
 
 // const getCategoryById = asyncHandler(async (req, res) => {
