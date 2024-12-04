@@ -16,6 +16,7 @@ const categoriesController = (req, res) => {
     res.render('categories', { categories: categories });
 }
 
+// Put in a db???
 // const getCategoryById = asyncHandler(async (req, res) => {
 //     const { categoryId } = req.params;
     

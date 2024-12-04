@@ -6,7 +6,7 @@ const app = express();
 
 const indexRouter = require('./routes/indexRouter');
 const categoriesRouter = require('./routes/categoriesRouter');
-// const productsRouter = require('./routes/productsRouter');
+const productsRouter = require('./routes/productsRouter');
 
 
 // What does this do???
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/', indexRouter); // main page
 app.use('/categories', categoriesRouter); // different alcohol: wine, beer, whiskey, etc...
-// app.use('/products', productsRouter); // within each category: red wine, white wine, ipas, stout, bourbon, scotch, etc...
+app.use('/products', productsRouter); // within each category: red wine, white wine, ipas, stout, bourbon, scotch, etc...
 
 // Error handling
 // app.use((err, req, res, next) => {

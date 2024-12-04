@@ -7,17 +7,10 @@
 </head>
 <body style="background-color: rgb(124, 124, 124);">
 
-    <!-- TODO: Must go through the categories array and somehow display each one in a <li></li>
-    USE forEach(categories) ??? -->
 
     <ul>
-        <!-- <% if (locals.categories) { %>
-            <li>
-                <%= categories.id %>
-            </li>
-        <% }; %> -->
         <% categories.forEach((category) => { %>
-            <li><a href="/categories"><% category %></a></li>
+            <a href="/products" style="text-decoration:none"><h1><%= category %></h1></a>
         <% }); %>
     </ul>
 
