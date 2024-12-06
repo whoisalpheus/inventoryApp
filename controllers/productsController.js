@@ -1,52 +1,62 @@
 const products = [
     {
+        id: 1,
         category: 'Beer',
-        subCategory: 'IPA',
+        name: 'IPA',
         price: 8
     },
     {
+        id: 1,
         category: 'Beer',
-        subCategory: 'Stout',
+        name: 'Stout',
         price: 10
     },
     {
+        id: 2,
         category: 'Wine',
-        subCategory: 'Red wine',
+        name: 'Red wine',
         price: 12
     },
     {
+        id: 2,
         category: 'Wine',
-        subCategory: 'White wine',
+        name: 'White wine',
         price: 12
     },
     {
+        id: 3,
         category: 'Whiskey',
-        subCategory: 'Bourbon',
+        name: 'Bourbon',
         price: 16
     },
     {
+        id: 3,
         category: 'Whiskey',
-        subCategory: 'Scotch',
+        name: 'Scotch',
         price: 18
     },
     {
+        id: 4,
         category: 'Rum',
-        subCategory: 'White rum',
+        name: 'White rum',
         price: 10
     },
     {
+        id: 4,
         category: 'Rum',
-        subCategory: 'Dark rum',
+        name: 'Dark rum',
         price: 11
     },
     {
+        id: 5,
         category: 'Tequila',
-        subCategory: 'Blanco',
+        name: 'Blanco',
         price: 10
     },
     {
+        id: 5,
         category: 'Tequila',
-        subCategory: 'Reposado',
+        name: 'Reposado',
         price: 12
     }
 ];

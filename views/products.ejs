@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product List</title>
 </head>
-<body>
+<body style="background-color: rgb(124, 124, 124);">
+    <ul>
+        <% if (products) %>
+        <% products.forEach((product) => { %>
+            <a href="/products" style="text-decoration:none"><h1><%= product.name %></h1></a>
+        <% }); %>
+    </ul>
     <!-- How this should look: -->
     
-    <!-- Beer From Categories -->
+    <!-- Beer From Categories id: 1 -->
         <!-- ipa -->
         <!-- stout -->
     
-    <!-- Wine From Categories -->
+    <!-- Wine From Categories id: 2 -->
         <!-- Red -->
          <!-- Goes into subcategory/product -->
             <!-- Malbec -->
@@ -23,7 +29,7 @@
             <!-- Pinot Grigio -->
             <!-- Riesling -->
 
-    <!-- Whiskey From Categories -->
+    <!-- Whiskey From Categories id: 3 -->
         <!-- Scotch -->
          <!-- Goes into subcategory/product -->
         <!-- Bourbon -->
@@ -31,13 +37,13 @@
         <!-- Irish -->
          <!-- Goes into subcategory/product -->
 
-    <!-- Rum From Categories -->
+    <!-- Rum From Categories id: 4 -->
         <!-- Dark -->
          <!-- Goes into subcategory/product -->
         <!-- White -->
          <!-- Goes into subcategory/product -->
           
-    <!-- Tequila From Categories -->
+    <!-- Tequila From Categories id: 5 -->
         <!-- Reposado -->
          <!-- Goes into subcategory/product -->
         <!-- Blanco -->
